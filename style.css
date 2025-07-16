@@ -1,75 +1,76 @@
 /* Fondo general y tipografía */
 body {
-  font-family: sans-serif;
-  background-color: #f9f5f0; /* beige claro */
-  padding: 20px;
-  text-align: center;
-  margin: 0;
+  font-family: sans-serif;
+  background-color: #f9f5f0; /* beige claro */
+  padding: 20px;
+  text-align: center;
+  margin: 0;
 }
 
 /* Título */
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* Contenedor de semestres en horizontal */
 .grid {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 10px;
-  scroll-snap-type: x mandatory;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
 }
 
 /* Cada semestre */
 .semestre {
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  padding: 15px;
-  background-color: #ffffff;
-  width: 280px;
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #ffffff;
+  width: 280px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Botones de ramos */
 .ramo {
-  display: block;
-  margin: 8px auto;
-  padding: 10px;
-  width: 100%;
-  background-color: #d2b48c; /* café claro */
-  color: #000;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.2s;
+  display: block;
+  margin: 8px auto;
+  padding: 10px;
+  width: 100%;
+  background-color: #d2b48c; /* café claro */
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
 }
 
 /* Aprobado */
 .ramo.aprobado {
-  background-color: #a8d5a2; /* verde claro */
-  text-decoration: line-through;
+  background-color: #a8d5a2; /* verde claro */
+  text-decoration: line-through;
+  color: #3a5a35; /* verde oscuro para mejor contraste */
 }
 
 /* Bloqueado */
 .ramo.bloqueado {
-  background-color: #78866b; /* verde oliva apagado */
-  color: #ddd;
-  cursor: not-allowed;
-  opacity: 0.7;
+  background-color: #78866b; /* verde oliva apagado */
+  color: #ddd;
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 /* Opcional: mejora el scroll en dispositivos */
 .grid::-webkit-scrollbar {
-  height: 8px;
+  height: 8px;
 }
 .grid::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
+  background: #ccc;
+  border-radius: 4px;
 }
 .grid::-webkit-scrollbar-track {
-  background: #f0eae1;
+  background: #f0eae1;
 }
