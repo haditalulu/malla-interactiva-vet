@@ -9,25 +9,25 @@
 <body>
   <h1>Malla Interactiva Medicina Veterinaria</h1>
   <div class="grid">
-    <div class="semestre" id="sem1">
-      <h2>1° Semestre</h2>
-      <button class="ramo" data-id="bio-cel">Biología Celular</button>
-      <button class="ramo" data-id="quimica">Química General y Orgánica</button>
-      <button class="ramo" data-id="intro-meve">Introducción a la Medicina Veterinaria</button>
-      <button class="ramo" data-id="cons-vidasilv">Conservación de la Vida Silvestre</button>
-      <button class="ramo" data-id="zoo-vet">Zoología Veterinaria</button>
-      <button class="ramo" data-id="antro">Antropología</button>
-    </div>
+   <div class="semestre" id="sem1">
+  <h2>1° Semestre</h2>
+  <button class="ramo" data-id="bio-cel">Biología Celular</button>
+  <button class="ramo" data-id="quimica">Química General y Orgánica</button>
+  <button class="ramo" data-id="intro-meve">Introducción a la Medicina Veterinaria</button>
+  <button class="ramo" data-id="cons-vidasilv">Conservación de la Vida Silvestre</button>
+  <button class="ramo" data-id="zoo-vet">Zoología Veterinaria</button>
+  <button class="ramo" data-id="antro">Antropología</button>
+</div>
 
-    <div class="semestre" id="sem2">
-      <h2>2° Semestre</h2>
-      <button class="ramo" data-id="fisi-med">Física Médica</button>
-      <button class="ramo" data-id="embri-histvet">Embriología-Histología Veterinaria</button>
-      <button class="ramo" data-id="bien-planet-trans-socioamb">Bienestar del Planeta y Transformación Socioambiental</button>
-      <button class="ramo" data-id="bioquim-vet">Bioquímica Veterinaria</button>
-      <button class="ramo" data-id="anato-vet-gene">Anatomía Veterinaria General</button>
-      <button class="ramo" data-id="eti">Ética</button>
-    </div>
+<div class="semestre" id="sem2">
+  <h2>2° Semestre</h2>
+  <button class="ramo" data-id="embri-histvet" data-prereq="bio-cel">Embriología-Histología Veterinaria</button>
+  <button class="ramo" data-id="bioquim-vet" data-prereq="bio-cel,quimica">Bioquímica Veterinaria</button>
+  <button class="ramo" data-id="eti" data-prereq="antro">Ética</button>
+  <button class="ramo" data-id="fisi-med">Física Médica</button>
+  <button class="ramo" data-id="bien-planet-trans-socioamb">Bienestar del Planeta y Transformación Socioambiental</button>
+  <button class="ramo" data-id="anato-vet-gene">Anatomía Veterinaria General</button>
+</div>
 
     <div class="semestre" id="sem3">   
       <h2>3° Semestre</h2>
