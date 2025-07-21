@@ -2,111 +2,113 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Malla Interactiva Medicina Veterinaria</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Malla Interactiva Medicina Veterinaria</h1>
   <div class="grid">
-   <div class="semestre" id="sem1">
-  <h2>1° Semestre</h2>
-  <button class="ramo" data-id="bio-cel">Biología Celular</button>
-  <button class="ramo" data-id="quimica">Química General y Orgánica</button>
-  <button class="ramo" data-id="intro-meve">Introducción a la Medicina Veterinaria</button>
-  <button class="ramo" data-id="cons-vidasilv">Conservación de la Vida Silvestre</button>
-  <button class="ramo" data-id="zoo-vet">Zoología Veterinaria</button>
-  <button class="ramo" data-id="antro">Antropología</button>
-</div>
 
-<div class="semestre" id="sem2">
-  <h2>2° Semestre</h2>
-  <button class="ramo" data-id="embri-histvet" data-prereq="bio-cel">Embriología-Histología Veterinaria</button>
-  <button class="ramo" data-id="bioquim-vet" data-prereq="bio-cel,quimica">Bioquímica Veterinaria</button>
-  <button class="ramo" data-id="eti" data-prereq="antro">Ética</button>
-  <button class="ramo" data-id="fisi-med">Física Médica</button>
-  <button class="ramo" data-id="bien-planet-trans-socioamb">Bienestar del Planeta y Transformación Socioambiental</button>
-  <button class="ramo" data-id="anato-vet-gene">Anatomía Veterinaria General</button>
-</div>
+    <div class="semestre" id="sem1">
+      <h2>1° Semestre</h2>
+      <button class="ramo" data-id="bio-cel" data-semestre="1">Biología Celular</button>
+      <button class="ramo" data-id="quimica" data-semestre="1">Química General y Orgánica</button>
+      <button class="ramo" data-id="intro-meve" data-semestre="1">Introducción a la Medicina Veterinaria</button>
+      <button class="ramo" data-id="cons-vidasilv" data-semestre="1">Conservación de la Vida Silvestre</button>
+      <button class="ramo" data-id="zoo-vet" data-semestre="1">Zoología Veterinaria</button>
+      <button class="ramo" data-id="antro" data-semestre="1">Antropología</button>
+    </div>
 
-    <div class="semestre" id="sem3">   
+    <div class="semestre" id="sem2">
+      <h2>2° Semestre</h2>
+      <button class="ramo" data-id="fisi-med" data-semestre="2">Física Médica</button>
+      <button class="ramo" data-id="embri-histvet" data-semestre="2" data-prereq-ramo="bio-cel">Embriología-Histología Veterinaria</button>
+      <button class="ramo" data-id="bien-planet-trans-socioamb" data-semestre="2">Bienestar del Planeta y Transformación Socioambiental</button>
+      <button class="ramo" data-id="bioquim-vet" data-semestre="2" data-prereq-ramo="bio-cel,quimica">Bioquímica Veterinaria</button>
+      <button class="ramo" data-id="anato-vet-gene" data-semestre="2">Anatomía Veterinaria General</button>
+      <button class="ramo" data-id="eti" data-semestre="2" data-prereq-ramo="antro">Ética</button>
+    </div>
+
+    <div class="semestre" id="sem3">
       <h2>3° Semestre</h2>
-      <button class="ramo" data-id="inmu-vet">Inmunología Veterinaria</button>
-      <button class="ramo" data-id="fisio-vet">Fisiología Veterinaria</button>
-      <button class="ramo" data-id="anato-vet-comp">Anatomía Veterinaria Comparada</button>
-      <button class="ramo" data-id="microbio-virolo">Microbiología y Virología</button>
-      <button class="ramo" data-id="repro-mejo-gen">Reproducción y Mejoramiento Genético</button>
-      <button class="ramo" data-id="gest-pers-hab-vid">Gestión Personal y Habilidades para la Vida</button>
+      <button class="ramo" data-id="inmu-vet" data-semestre="3">Inmunología Veterinaria</button>
+      <button class="ramo" data-id="fisio-vet" data-semestre="3" data-prereq-ramo="bioquim-vet">Fisiología Veterinaria</button>
+      <button class="ramo" data-id="microbio-virolo" data-semestre="3" data-prereq-ramo="bioquim-vet">Microbiología y Virología</button>
+      <button class="ramo" data-id="repro-mejo-gen" data-semestre="3" data-prereq-ramo="bioquim-vet,anato-vet-gene">Reproducción y Mejoramiento Genético</button>
+      <button class="ramo" data-id="gest-pers-hab-vid" data-semestre="3">Gestión Personal y Habilidades para la Vida</button>
+      <button class="ramo" data-id="anato-vet-comp" data-semestre="3" data-prereq-ramo="anato-vet-gene">Anatomía Veterinaria Comparada</button>
     </div>
 
     <div class="semestre" id="sem4">
       <h2>4° Semestre</h2>
-      <button class="ramo" data-id="ecolo-ecodi-terri">Ecología, Ecodinámica y Territorio</button>
-      <button class="ramo" data-id="fisiopat-vet">Fisiopatología Veterinaria</button>
-      <button class="ramo" data-id="enf-infec">Enfermedades Infecciosas</button>
-      <button class="ramo" data-id="enf-paras">Enfermedades Parasitarias</button>
-      <button class="ramo" data-id="gine-obs-andro-vet">Gineco Obstetricia y Andrología Veterinaria</button>
+      <button class="ramo" data-id="fisiopat-vet" data-semestre="4" data-prereq-ramo="fisio-vet">Fisiopatología Veterinaria</button>
+      <button class="ramo" data-id="enf-infec" data-semestre="4" data-prereq-ramo="microbio-virolo">Enfermedades Infecciosas</button>
+      <button class="ramo" data-id="enf-paras" data-semestre="4">Enfermedades Parasitarias</button>
+      <button class="ramo" data-id="gine-obs-andro-vet" data-semestre="4" data-prereq-ramo="repro-mejo-gen">Gineco-Obstetricia y Andrología Veterinaria</button>
+      <button class="ramo" data-id="ecolo-ecodi-terri" data-semestre="4">Ecología, Ecodinámica y Territorio</button>
+      <button class="ramo" data-id="hito-niv-4-5" data-semestre="4" data-prereq-semestre="2,3">Hito Evaluativo Integrativo (Aprobado nivel 2° y 3°)</button>
     </div>
 
     <div class="semestre" id="sem5">
       <h2>5° Semestre</h2>
-      <button class="ramo" data-id="patolo-gen">Patología General</button>
-      <button class="ramo" data-id="farma-vet">Farmacología Veterinaria</button>
-      <button class="ramo" data-id="nutri-ali-anim">Nutrición y Alimentación Animal</button>
-      <button class="ramo" data-id="meto-invs-esta">Metodología de la Investigación y Estadística</button>
-      <button class="ramo" data-id="emp-form-negoc">Emprendimiento y Formación en Negocios</button>
-      <button class="ramo" data-id="perso-soc">Persona y Sociedad</button>
+      <button class="ramo" data-id="patolo-gen" data-semestre="5" data-prereq-ramo="fisiopat-vet">Patología General</button>
+      <button class="ramo" data-id="farma-vet" data-semestre="5" data-prereq-ramo="fisiopat-vet">Farmacología Veterinaria</button>
+      <button class="ramo" data-id="nutri-ali-anim" data-semestre="5">Nutrición y Alimentación Animal</button>
+      <button class="ramo" data-id="meto-invs-esta" data-semestre="5">Metodología de la Investigación y Estadística</button>
+      <button class="ramo" data-id="emp-form-negoc" data-semestre="5">Emprendimiento y Formación en Negocios</button>
+      <button class="ramo" data-id="perso-soc" data-semestre="5" data-prereq-ramo="eti">Persona y Sociedad</button>
     </div>
 
     <div class="semestre" id="sem6">
       <h2>6° Semestre</h2>
-      <button class="ramo" data-id="pato-esp-sist">Patología Especial de Sistemas</button>
-      <button class="ramo" data-id="exp-clin">Exploración Clínica</button>
-      <button class="ramo" data-id="biene-anim">Bienestar Animal</button>
-      <button class="ramo" data-id="pract-ini">Práctica Inicial</button>
-      <button class="ramo" data-id="patolo-clin">Patología Clínica</button>
-      <button class="ramo" data-id="elec-form-integ-1">Electivo I: Formación Integral</button>
+      <button class="ramo" data-id="pato-esp-sist" data-semestre="6" data-prereq-ramo="patolo-gen">Patología Especial de Sistemas</button>
+      <button class="ramo" data-id="exp-clin" data-semestre="6">Exploración Clínica</button>
+      <button class="ramo" data-id="biene-anim" data-semestre="6">Bienestar Animal</button>
+      <button class="ramo" data-id="pract-ini" data-semestre="6" data-prereq-semestre="4,5">Práctica Inicial (Aprobado nivel 4° y 5°)</button>
+      <button class="ramo" data-id="patolo-clin" data-semestre="6" data-prereq-ramo="fisiopat-vet">Patología Clínica</button>
+      <button class="ramo" data-id="elec-form-integ-1" data-semestre="6">Electivo I: Formación Integral</button>
     </div>
 
     <div class="semestre" id="sem7">
       <h2>7° Semestre</h2>
-      <button class="ramo" data-id="gana-rum">Ganadería de Rumiantes</button>
-      <button class="ramo" data-id="produc-monog">Producción de Monogástricos</button>
-      <button class="ramo" data-id="acui">Acuicultura</button>
-      <button class="ramo" data-id="ciru-gen">Cirugía General</button>
-      <button class="ramo" data-id="med-int">Medicina Interna</button>
-      <button class="ramo" data-id="elec-form-integ-2">Electivo II: Formación Integral</button>
+      <button class="ramo" data-id="gana-rum" data-semestre="7" data-prereq-ramo="nutri-ali-anim">Ganadería de Rumiantes</button>
+      <button class="ramo" data-id="produc-monog" data-semestre="7" data-prereq-ramo="nutri-ali-anim">Producción de Monogástricos</button>
+      <button class="ramo" data-id="acui" data-semestre="7" data-prereq-ramo="nutri-ali-anim">Acuicultura</button>
+      <button class="ramo" data-id="ciru-gen" data-semestre="7" data-prereq-ramo="pato-esp-sist">Cirugía General</button>
+      <button class="ramo" data-id="med-int" data-semestre="7" data-prereq-ramo="exp-clin">Medicina Interna</button>
+      <button class="ramo" data-id="elec-form-integ-2" data-semestre="7">Electivo II: Formación Integral</button>
     </div>
 
     <div class="semestre" id="sem8">
       <h2>8° Semestre</h2>
-      <button class="ramo" data-id="diagn-imag">Diagnóstico por Imágenes</button>
-      <button class="ramo" data-id="fund-cienc-datos">Fundamentos de la Ciencia de Datos</button>
-      <button class="ramo" data-id="ciru-esp">Cirugía Especial</button>
-      <button class="ramo" data-id="salu-publ-epidem">Salud Pública y Epidemiología</button>
-      <button class="ramo" data-id="pract-int">Práctica Intermedia</button>
+      <button class="ramo" data-id="diagn-imag" data-semestre="8" data-prereq-ramo="exp-clin">Diagnóstico por Imágenes</button>
+      <button class="ramo" data-id="fund-cienc-datos" data-semestre="8">Fundamentos de la Ciencia de Datos</button>
+      <button class="ramo" data-id="ciru-esp" data-semestre="8" data-prereq-ramo="ciru-gen">Cirugía Especial</button>
+      <button class="ramo" data-id="salu-publ-epidem" data-semestre="8">Salud Pública y Epidemiología</button>
+      <button class="ramo" data-id="pract-int" data-semestre="8" data-prereq-ramo="pract-ini">Práctica Intermedia</button>
     </div>
 
     <div class="semestre" id="sem9">
       <h2>9° Semestre</h2>
-      <button class="ramo" data-id="clin-ani-may">Clínica de Animales Mayores</button>
-      <button class="ramo" data-id="clin-ani-men">Clínica de Animales Menores</button>
-      <button class="ramo" data-id="inoc-alimen">Inocuidad de Alimentos</button>
-      <button class="ramo" data-id="clin-ani-silv-exo">Clínica de Animales Silvestres y Exóticos</button>
-      <button class="ramo" data-id="inter-integ">Internado Integrador</button>
-      <button class="ramo" data-id="elec-form-int-3">Electivo III: Formación Integral</button>
+      <button class="ramo" data-id="clin-ani-may" data-semestre="9" data-prereq-ramo="med-int">Clínica de Animales Mayores</button>
+      <button class="ramo" data-id="clin-ani-men" data-semestre="9" data-prereq-ramo="med-int">Clínica de Animales Menores</button>
+      <button class="ramo" data-id="inoc-alimen" data-semestre="9" data-prereq-ramo="salu-publ-epidem">Inocuidad de los Alimentos</button>
+      <button class="ramo" data-id="clin-ani-silv-exo" data-semestre="9" data-prereq-ramo="med-int">Clínica de Animales Silvestres y Exóticos</button>
+      <button class="ramo" data-id="inter-integ" data-semestre="9" data-prereq-ramo="med-int">Internado Integrador</button>
+      <button class="ramo" data-id="elec-form-int-3" data-semestre="9">Electivo III: Formación Integral</button>
     </div>
 
     <div class="semestre" id="sem10">
       <h2>10° Semestre</h2>
-      <button class="ramo" data-id="act-integr-titu">Actividad Integradora de Titulación</button>
-      <button class="ramo" data-id="elect-1">Electivo I</button>
-      <button class="ramo" data-id="elect-2">Electivo II</button>
-      <button class="ramo" data-id="gest-carr-desa-prof">Gestión de Carrera y Desarrollo Profesional</button>
+      <button class="ramo" data-id="act-integr-titu" data-semestre="10" data-prereq-semestre="9">Actividad Integradora de Titulación (Aprobado nivel 9°)</button>
+      <button class="ramo" data-id="elect-1" data-semestre="10">Electivo I</button>
+      <button class="ramo" data-id="elect-2" data-semestre="10">Electivo II</button>
+      <button class="ramo" data-id="gest-carr-desa-prof" data-semestre="10">Gestión de Carrera y Desarrollo Profesional</button>
     </div>
+
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
