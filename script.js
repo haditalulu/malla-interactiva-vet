@@ -8,7 +8,7 @@ function semestreAprobado(semestre) {
 
 // Función para saber si un ramo está desbloqueado (prerrequisitos aprobados)
 function estaDesbloqueado(ramo) {
-  // Prerrequisitos por ramo
+  // Prerrequisitos por ramo (data-prereq-ramo)
   const prereqsRamo = ramo.dataset.prereqRamo; // puede ser undefined
   if (prereqsRamo) {
     const ids = prereqsRamo.split(',').map(id => id.trim());
@@ -19,7 +19,7 @@ function estaDesbloqueado(ramo) {
     if (!todosAprobados) return false;
   }
 
-  // Prerrequisitos por semestre (ejemplo: "4,5")
+  // Prerrequisitos por semestre (data-prereq-semestre)
   const prereqsSem = ramo.dataset.prereqSemestre; // puede ser undefined
   if (prereqsSem) {
     const semestres = prereqsSem.split(',').map(s => s.trim());
@@ -46,13 +46,14 @@ function actualizarBloqueos() {
 // Al iniciar, actualizar bloqueos según prerrequisitos
 actualizarBloqueos();
 
-// Evento click para cambiar estado aprobado y animar
+// Evento click para cambiar estado aprobado y animar movimiento horizontal
 document.querySelectorAll('.ramo').forEach(boton => {
   boton.addEventListener('click', () => {
     if (boton.classList.contains('bloqueado')) {
       return; // no hace nada si está bloqueado
     }
 
+    // Agrega clase animar para animación horizontal
     boton.classList.add('animar');
     setTimeout(() => boton.classList.remove('animar'), 300);
 
