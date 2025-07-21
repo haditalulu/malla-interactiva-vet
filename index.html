@@ -47,7 +47,8 @@
       <button class="ramo" data-id="enf-paras" data-semestre="4">Enfermedades Parasitarias</button>
       <button class="ramo" data-id="gine-obs-andro-vet" data-semestre="4" data-prereq-ramo="repro-mejo-gen">Gineco-Obstetricia y Andrología Veterinaria</button>
       <button class="ramo" data-id="ecolo-ecodi-terri" data-semestre="4">Ecología, Ecodinámica y Territorio</button>
-      <button class="ramo" data-id="hito-niv-4-5" data-semestre="4" data-prereq-semestre="2,3">Hito Evaluativo Integrativo (Aprobado nivel 2° y 3°)</button>
+      <!-- Hito evaluativo agregado con prerrequisito de semestre completo -->
+      <button class="ramo bloqueado" data-id="hito-eval-4" data-semestre="4" data-prereq-semestre="2,3">Hito Evaluativo IV</button>
     </div>
 
     <div class="semestre" id="sem5">
@@ -60,12 +61,12 @@
       <button class="ramo" data-id="perso-soc" data-semestre="5" data-prereq-ramo="eti">Persona y Sociedad</button>
     </div>
 
-    <div class="semestre" id="sem6">
+     <div class="semestre" id="sem6">
       <h2>6° Semestre</h2>
       <button class="ramo" data-id="pato-esp-sist" data-semestre="6" data-prereq-ramo="patolo-gen">Patología Especial de Sistemas</button>
       <button class="ramo" data-id="exp-clin" data-semestre="6">Exploración Clínica</button>
       <button class="ramo" data-id="biene-anim" data-semestre="6">Bienestar Animal</button>
-      <button class="ramo" data-id="pract-ini" data-semestre="6" data-prereq-semestre="4,5">Práctica Inicial (Aprobado nivel 4° y 5°)</button>
+      <button class="ramo bloqueado" data-id="practica-inicial" data-semestre="6" data-prereq-semestre="4,5">Práctica Inicial</button>
       <button class="ramo" data-id="patolo-clin" data-semestre="6" data-prereq-ramo="fisiopat-vet">Patología Clínica</button>
       <button class="ramo" data-id="elec-form-integ-1" data-semestre="6">Electivo I: Formación Integral</button>
     </div>
@@ -87,6 +88,7 @@
       <button class="ramo" data-id="ciru-esp" data-semestre="8" data-prereq-ramo="ciru-gen">Cirugía Especial</button>
       <button class="ramo" data-id="salu-publ-epidem" data-semestre="8">Salud Pública y Epidemiología</button>
       <button class="ramo" data-id="pract-int" data-semestre="8" data-prereq-ramo="pract-ini">Práctica Intermedia</button>
+      <button class="ramo bloqueado" data-id="hito-eval-8" data-semestre="8" data-prereq-semestre="6,7">Hito Evaluativo VIII</button>
     </div>
 
     <div class="semestre" id="sem9">
@@ -99,14 +101,13 @@
       <button class="ramo" data-id="elec-form-int-3" data-semestre="9">Electivo III: Formación Integral</button>
     </div>
 
-    <div class="semestre" id="sem10">
+  <div class="semestre" id="sem10">
       <h2>10° Semestre</h2>
       <button class="ramo" data-id="act-integr-titu" data-semestre="10" data-prereq-semestre="9">Actividad Integradora de Titulación (Aprobado nivel 9°)</button>
-      <button class="ramo" data-id="elect-1" data-semestre="10">Electivo I</button>
-      <button class="ramo" data-id="elect-2" data-semestre="10">Electivo II</button>
+      <button class="ramo bloqueado" data-id="electivo-1" data-semestre="10" data-prereq-semestre="9">Electivo I</button>
+      <button class="ramo bloqueado" data-id="electivo-2" data-semestre="10" data-prereq-semestre="9">Electivo II</button>
       <button class="ramo" data-id="gest-carr-desa-prof" data-semestre="10">Gestión de Carrera y Desarrollo Profesional</button>
     </div>
-
   </div>
 
   <script src="script.js"></script>
